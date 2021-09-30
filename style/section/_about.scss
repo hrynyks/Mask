@@ -1,0 +1,131 @@
+.about {
+
+    &-wrap {
+        display: flex;
+        @include a (tablet-xl) {
+            justify-content: center;
+        }
+    }
+
+    &__left {
+        background-image: url(./../img/about-bg.jpg);
+        max-width: 570px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        @include a (tablet-xl) {
+            display: none;
+        }
+
+        &-descr {
+            width: 285px;
+            height: 332px;
+            background-color: $main-color;
+            padding: 60px 30px;
+            color: $light-color;
+            font-size: toRem(15);
+            line-height: 24px;
+        }
+    }
+
+
+    &__right {
+
+        &-wrap {
+            display: flex;
+        }
+
+        max-width: 570px;
+
+        &-descr {
+            font-size: toRem(15);
+            padding: 80px 30px;
+            line-height: 24px;
+
+            &-1 {
+                color: #575C74;
+            }
+
+            &-2 {
+                background-color: $main-color;
+                color: $light-color;
+                border-radius: 0px 20px 0px 0px;
+            }
+        }
+    }
+
+    &__info {
+        padding: 50px 40px;
+        background-color: $accent-color;
+        border-radius: 0px 0px 20px 0px;
+
+        &-title {
+            font-size: toRem(20);
+            font-weight: 700;
+            font-family: 'Rubik', sans-serif;
+            margin-bottom: 5px;
+        }
+
+        &-descr {
+            font-size: toRem(15);
+            line-height: 24px;
+            max-width: 492px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include a (tablet) {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+        }
+    }
+
+    &__btn {
+        width: 125px;
+        height: 46px;
+        border: 1px solid $main-color;
+        border-radius: 8px;
+        background-color: $accent-color;
+        color: $main-color;
+        // padding: 10px 20px;
+    }
+
+    &__phone {
+        margin-right: 40px;
+        padding-left: 99px;
+        border-left: 1px solid $light-color;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(./../img/about-phone.png);
+            width: 46px;
+            height: 46px;
+            left: 40px;
+        }
+    }
+
+    &__span {
+        font-size: toRem(14);
+        font-weight: 600;
+        color: $main-color;
+        display: block;
+    }
+
+    &__link {
+        font-size: toRem(24);
+        font-weight: 600;
+        color: $dark-color;
+        white-space: nowrap;
+    }
+
+}

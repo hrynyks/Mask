@@ -1,0 +1,32 @@
+.get {
+    padding: 100px 0;
+
+    &__title {
+        font-size: toRem(48);
+        font-weight: 700;
+        font-family: 'Rubik', sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__descr {
+        max-width: 664px;
+        width: 100%;
+        line-height: 30px;
+        color: #575C74;
+        text-align: center;
+        margin: 0 auto 35px;
+    }
+
+    &__btn {
+        font-size: toRem(14);
+        font-weight: 500;
+        font-family: 'Rubik', sans-serif;
+        padding: 8px 24px;
+        background-color: $main-color;
+        color: $light-color;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+    }
+}

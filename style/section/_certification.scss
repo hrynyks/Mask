@@ -1,0 +1,47 @@
+.certification {
+    padding: 80px 0;
+    background-color: #F7FDFB;
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    &__title {
+        max-width: 309px;
+        width: 100%;
+        margin-right: 87px;
+        padding-right: 163px;
+        white-space: nowrap;
+        position: relative;
+
+        @include a (mobile) {
+            margin-right: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 147px;
+            height: 1px;
+            background-color: $accent-color;
+            top: 50%;
+            right: -45px;
+
+            @include a (mobile) {
+                display: none;
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 100px;
+    }
+}

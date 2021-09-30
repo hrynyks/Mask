@@ -1,0 +1,39 @@
+.respirator {
+    padding: 133px 0 62px;
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        @include a (laptop) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__images {
+        max-width: 570px;
+        @include a (laptop) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__content {
+        max-width: 523px;
+    }
+
+    &__title {
+        font-size: toRem(48);
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        color: #0C122D;
+        margin-bottom: 26px;
+    }
+
+    &__descr {
+        font-weight: 700;
+        line-height: 30px;
+        color: #575C74;
+        &:nth-child(2) {
+            margin-bottom: 20px;
+        }
+    }
+}

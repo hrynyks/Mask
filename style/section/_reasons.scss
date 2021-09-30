@@ -1,0 +1,79 @@
+.reasons {
+    padding: 50px 0;
+    background: #F7FDFB;
+    &-wrap {
+        display: flex;
+        gap: 78px;
+    }
+
+    &__image {
+        max-width: 471px;
+        width: 100%;
+
+        @include a (tablet) {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-size: toRem(48);
+        font-weight: 700;
+        font-family: 'Rubik', sans-serif;
+        color: $dark-color;
+        margin-bottom: 20px;
+    }
+
+    &__descr {
+        line-height: 25px;
+        color: #575C74;
+        margin-bottom: 35px;
+    }
+
+    &__items {
+        display: flex;
+        gap: 50px 100px;
+        flex-wrap: wrap;
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        max-width: 235px;
+        width: 100%;
+        padding-left: 74px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 56px;
+            height: 56px;
+            left: 0;
+        }
+
+        &-1::before {
+            background: url(./../img/reasons-icon-1.png);
+        }
+        &-2::before {
+            background: url(./../img/reasons-icon-2.png);
+        }
+        &-3::before {
+            background: url(./../img/reasons-icon-3.png);
+        }
+        &-4::before {
+            background: url(./../img/reasons-icon-4.png);
+        }
+
+        &-title {
+            font-size: toRem(20);
+            color: $dark-color;
+            margin-bottom: 10px;
+        }
+
+        &-descr {
+            font-size: toRem(15);
+            line-height: 22px;
+        }
+    }
+}

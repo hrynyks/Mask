@@ -1,0 +1,149 @@
+.hero {
+    position: relative;
+    padding-top: 153px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 61px;
+        @include a (tablet-xl) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__content {
+        max-width: 550px;
+        width: 100%;
+    }
+
+    &__model {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        font-size: toRem(14);
+        color: $accent-color;
+        display: block;
+        margin: 0 0 30px;
+    }
+
+    &__title {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        font-size: toRem(72);
+        line-height: 1.1;
+        margin-bottom: 40px;
+        @include a (laptop) {
+            font-size: toRem(50);
+        }
+    }
+
+    &__descr {
+        line-height: 24px;
+        color: #575C74;
+        margin-bottom: 54px;
+    }
+
+    &__buttons {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    &__btn-right {
+        color: $accent-color;
+        background-color: $light-color;
+        border: 1px solid $accent-color;
+        border-radius: 8px;
+        padding: 8px 25px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        opacity: 0.15;
+        overflow: hidden;
+        border-radius: 0px 0px 0px 150px;
+        width: 49%;
+        margin: 0;
+    }
+
+    &__images {
+        
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 35px;
+        place-items: center;
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include a (mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        max-width: 240px;
+        &-title {
+            font-size: toRem(20);
+            font-weight: 700;
+            line-height: 28px;
+            color: #0C122D;
+            padding-left: 50px;
+            max-width: 240px;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+
+            &-1::before {
+                background: url(./../img/hero-item-1.svg);
+            }
+
+            &-2::before {
+                content: "";
+                position: absolute;
+                background: url(./../img/hero-item-2.svg);
+                width: 40px;
+                height: 40px;
+                left: 0;
+            }
+
+            &-3::before {
+                content: "";
+                position: absolute;
+                background: url(./../img/hero-item-3.svg);
+                width: 40px;
+                height: 40px;
+                left: 0;
+            }
+
+            &-4::before {
+                content: "";
+                position: absolute;
+                background: url(./../img/hero-item-4.svg);
+                width: 40px;
+                height: 40px;
+                left: 0;
+            }
+        }
+
+        &-descr {
+            font-size: toRem(15);
+            line-height: 22px;
+            color: #575C74;
+            padding-left: 50px;
+        }
+    }
+}
